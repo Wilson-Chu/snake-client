@@ -20,6 +20,22 @@ const handleUserInput = function(key) {
   if (key === 'd' || key === 'D') {
     connection.write("Move: right");
   }
+
+  if (key === 'g' || key === 'G') {
+    connection.write("Say: GG!");
+  }
+  if (key === 'h' || key === 'H') {
+    connection.write("Say: Hello!");
+  }
+  if (key === 'q' || key === 'Q') {
+    connection.write("Say: Quit it!");
+  }
+  if (key === 'e' || key === 'E') {
+    connection.write("Say: Exit!");
+  }
+  if (key === 'f' || key === 'F') {
+    connection.write("Say: Farewell!");
+  }
 };
 
 const setupInput = (conn) => {
