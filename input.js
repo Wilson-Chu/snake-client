@@ -9,21 +9,22 @@ const handleUserInput = function(key) {
   }
 
   if (key === 'w' || key === 'W') {
-    console.log("Move: up");
+    connection.write("Move: up");
   }
   if (key === 'a' || key === 'A') {
-    console.log("Move: left");
+    connection.write("Move: left");
   }
   if (key === 's' || key === 'S') {
-    console.log("Move: down");
+    connection.write("Move: down");
   }
   if (key === 'd' || key === 'D') {
-    console.log("Move: right");
+    connection.write("Move: right");
   }
 };
 
-// setup interface to handle user input from stdin
-const setupInput = function() {
+const setupInput = (conn) => {
+  connection = conn;
+
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
